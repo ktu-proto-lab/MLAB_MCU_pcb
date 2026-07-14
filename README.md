@@ -3,6 +3,8 @@
 Test board for the taped-out `MLAB_MCU` (top level: `ibex_simple_system`), packaged in a
 QFN32 / MLP5X5-32 open-cavity package.
 
+Socket: https://lt.farnell.com/3m/232-5205-01/test-socket-qfn-32pos-0-5mm-th/dp/2668401?cfm=true
+
 Two board versions, one schematic project:
 
 | Version | Purpose | Notes |
@@ -66,7 +68,7 @@ analysis was 20 mV.
 
 **Requirements**
 
-- Both rails brought out to a 2-pin header so a bench SMU can replace the on-board LDO (for bringup and later a VDD-vs-Fmax test). Jumper to select between external and on-board power source.
+- Both rails brought through a jumper so that it can be disconnected and a bench SMU can replace the on-board LDO (for bringup and later a VDD-vs-Fmax test). 
 - **Current sense:** high-side shunt + INA226 on each rail,
   so core and pad-ring current are separated even though ground is shared. Have a bypass path for bringup
 - **Decoupling**: 100 nF per supply pin, placed at the package. 1–10 µF bulk per rail.
@@ -79,10 +81,11 @@ analysis was 20 mV.
 
 **Requirements**
 
-- Clock brought out to a SMA connector for external generator (for bringup and precise sweeps). 50 Ω shunt to ground at the connector. Some protection in case wrong amplitude from the generator?
-- Fixed CMOS oscillator at 25MHz (regular operation).
+- Clock brought out to a SMA connector for external generator (for bringup and precise sweeps). 50 Ω shunt to ground at the connector. Some protection in case wrong amplitude from the generator? TODO: ask RF people!
+- Fixed CMOS oscillator at 20MHz (regular operation, for SCL=100kHz).
 - Header for FPGA (slow scan shifting clock).
-- Jumper to choose between the 3 clock sources. Probably 1x3 jumper and another 2-pin jumper for the FPGA clock.
+- Clock mux instead of jumpers for better SI. 
+(OLD: Jumper to choose between the 3 clock sources. Probably 1x3 jumper and another 2-pin jumper for the FPGA clock.)
 - Keep trace to `clk_sys_Pad` short (<30 mm). A 33 Ω series resistor at each clock source for better line matching?
 
 
@@ -90,7 +93,9 @@ analysis was 20 mV.
 
 ## 4. Reset
 
-- Push button + pull-up + debounce capacitor.
+- Normally control by MCU or FPGA - the controller system
+
+- Physical switch + pull-up + debounce capacitor.
 - Test point on the reset net.
 - Open-drain drive point from the FPGA?, so reset can be asserted under software control. Maybe?
 
@@ -101,8 +106,7 @@ analysis was 20 mV.
 `test_mode` is **active high**.
 
 - 10 kΩ pull-**down** on `test_mode_Pad`, plus a header so that FPGA could force it high.
-- Scan pins `ext_pad[2]` (sdi), `ext_pad[3]` (sdo), `ext_pad[4]` (scan_en) should stay electrically clean:
-  - no LED, no pull-up/down
+- Scan pins `ext_pad[2]` (sdi), `ext_pad[3]` (sdo), `ext_pad[4]` (scan_en) should stay electrically clean when scan is used - no LED, no pull-up/down.
 
 - Note: scan shifting uses clk_sys, so the external clock path must pass DC-to-80 MHz.
 
@@ -148,10 +152,11 @@ analysis was 20 mV.
 ## 10. Bring-up order
 
 1. Bare board: check rails, no shorts. Chip not fitted.
-2. Fit chip. Power up with reset held, no clock. Measure quiescent current on both rails.
+2. Fit chip. Power up IO ring and have the supply limited to 30mA or something
+2. Then power up the IO ring with the Core, supply current limited again
 3. Reset still held.  Apply a slow clock and step it (1, 5, 10 MHz). Core current should rise roughly linearly with frequency, if not - clock isn't reaching the die. If jumps to something large - contention or latch-up.
 4. T1 from §12. `test_mode = 1`: shift a known pattern through sdi -> sdo. This proves the die is alive and the pad ring works, before any firmware exists.
-5. EEPROM fitted. Release reset, verify writeback works.(Can skip to GPIO example)
+5. EEPROM fitted. Release reset, verify writeback works.(Can skip to GPIO example). Use 20MHz clock.
 6. EEPROM fitted with a blink program. Release reset, watch a GPIO toggle.
 7. UART hello-world.
 8. Ramp clock to 80 MHz, then shmoo.
@@ -212,3 +217,5 @@ TBD further
 ### T10 - Benchmark
 CoreMark at max stable frequency.
 
+### T11 - Scan-chain testing with automatically generated test patterns
+Use ATPG test patterns for a high coverage scan-chain test
