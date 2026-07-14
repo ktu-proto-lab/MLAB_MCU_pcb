@@ -8,7 +8,7 @@ Two board versions, one schematic project:
 | Version | Purpose | Notes |
 |---|---|---|
 | **A - Socketed (Priority)** | Screening / characterisation of multiple dies | Full instrumentation.  |
-| **B - Direct solder (Future)** | Demo, long-term lab setup, student projects | Same schematic, instrumentation depopulated (fixed LDOs, fixed oscillator). |
+| **B - Direct solder (Future)** | Demo, long-term lab setup | Same schematic, instrumentation depopulated (fixed LDOs, fixed oscillator). |
 
 ---
 
@@ -62,20 +62,14 @@ Two rails, common ground.
 | `VDDPAD` (I/O) | 3.3 V | ±2 % / ±5 % |
 
 Rationale: timing libraries are characterised at ±10 %, and the worst IR drop seen in power
-analysis was 2 mV. A regulator with ≤1 % initial accuracy and a 0.1 % feedback divider
-(ADP7118 / TPS7A47 / TLV757 class) leaves plenty of margin for droop, ripple and transients.
+analysis was 20 mV. 
+
 **Requirements**
 
-- Both rails brought out to a 2-pin header so a bench SMU can replace the on-board LDO
-  (for a VDD-vs-Fmax test).
+- Both rails brought out to a 2-pin header so a bench SMU can replace the on-board LDO (for bringup and later a VDD-vs-Fmax test). Jumper to select between external and on-board power source.
 - **Current sense:** high-side shunt + INA226 on each rail,
-  so core and pad-ring current are separated even though ground is shared.
-- **Sequencing:** chain the LDO enables (3.3 V first, then 1.2 V, or vice versa) with a jumper
-  to reverse the order so the sequence can actually be tested. If the pad ring powers up
-  while the core is dead, level shifters can inject current into the unpowered core.
+  so core and pad-ring current are separated even though ground is shared. Have a bypass path for bringup
 - **Decoupling**: 100 nF per supply pin, placed at the package. 1–10 µF bulk per rail.
-  Low-ESR bulk at each LDO output. 0 Ω footprint (0603, bead-compatible) in series with
-  each LDO input.
 
 ---
 
@@ -85,11 +79,11 @@ analysis was 2 mV. A regulator with ≤1 % initial accuracy and a 0.1 % feedback
 
 **Requirements**
 
-- Fixed 3.3 V CMOS oscillator footprint (populate 25 MHz for bring-up, 80 MHz for characterisation).
-- Header for an external clock (FPGA-driven, or bench generator).
-- Selection by **jumper**. Place the jumper immediately at the source, keep
-  the trace to `clk_sys_Pad` short (< ~30 mm), and put a **33 Ω series resistor at the source**.
-  Ground return directly underneath the clock trace.
+- Clock brought out to a SMA connector for external generator (for bringup and precise sweeps). 50 Ω shunt to ground at the connector. Some protection in case wrong amplitude from the generator?
+- Fixed CMOS oscillator at 25MHz (regular operation).
+- Header for FPGA (slow scan shifting clock).
+- Jumper to choose between the 3 clock sources. Probably 1x3 jumper and another 2-pin jumper for the FPGA clock.
+- Keep trace to `clk_sys_Pad` short (<30 mm). A 33 Ω series resistor at each clock source for better line matching?
 
 
 ---
@@ -97,9 +91,8 @@ analysis was 2 mV. A regulator with ≤1 % initial accuracy and a 0.1 % feedback
 ## 4. Reset
 
 - Push button + pull-up + debounce capacitor.
-- **Open-drain drive point from the FPGA**, so reset can be asserted under software
-  control. Required for automated EEPROM reprogramming and shmoo loops.
 - Test point on the reset net.
+- Open-drain drive point from the FPGA?, so reset can be asserted under software control. Maybe?
 
 ---
 
@@ -107,14 +100,9 @@ analysis was 2 mV. A regulator with ≤1 % initial accuracy and a 0.1 % feedback
 
 `test_mode` is **active high**.
 
-- 10 kΩ pull-**down** on `test_mode_Pad`, plus a header to force it high and a route to the
-  FPGA header so scan can be entered under software control. Series resistor, nothing else
-  drives this net.
-- Scan pins `ext_pad[2]` (sdi), `ext_pad[3]` (sdo), `ext_pad[4]` (scan_en) must stay
-  **electrically clean**:
-  - no LED, no pull-up/down, no debounce cap on these three
-  - series resistor 33 Ω max
-  - short, direct route to the FPGA header, ground return alongside
+- 10 kΩ pull-**down** on `test_mode_Pad`, plus a header so that FPGA could force it high.
+- Scan pins `ext_pad[2]` (sdi), `ext_pad[3]` (sdo), `ext_pad[4]` (scan_en) should stay electrically clean:
+  - no LED, no pull-up/down
 
 - Note: scan shifting uses clk_sys, so the external clock path must pass DC-to-80 MHz.
 
@@ -125,45 +113,31 @@ analysis was 2 mV. A regulator with ≤1 % initial accuracy and a 0.1 % feedback
 - **Socket** for the 24CS512 (SOIC-to-DIP adapter into a DIP-8 socket, or a small daughterboard
   on a header so firmware images can be swapped by swapping boards).
 - **Header** in parallel with the EEPROM for FPGA emulation of the I2C slave.
-  Convention: *if the header is used, the EEPROM is removed.* No bus switch, no isolation logic.
-- Pull-ups: **4.7 kΩ** on SDA and SCL. TODO: If bootloads in fast mode need another set of **4.7 kΩ** as DNP in parallel.
-- Jumpers on EEPROM `A0..A2` and `WP`.
-- Test points on SDA and SCL, plus a ground probe loop next to them.
-- **Sensor header:** a 4-pin (3V3 / GND / SDA / SCL) header on the same bus so an I2C sensor
-  breakout can be plugged in for peripheral testing. Nothing populated by default.
+  Convention: **if the header is used, the EEPROM is removed.** No isolation logic.
+- Pull-ups: **4.7 kΩ** on SDA and SCL. At 80MHz `clk_sys` SCL will be 400kHz, for that add another set of **4.7 kΩ** as DNP in parallel.
+- Jumpers on EEPROM `A0..A2` and `WP`. Or make sure to configure correctly.
+- Test points on SDA and SCL. Plus ground probe loop.
+- **Sensor header:** a 4-pin (3V3 / GND / SDA / SCL) header on the same bus so an I2C sensor breakout can be plugged in for peripheral testing. Nothing populated by default.
 
 ---
 
 ## 7. GPIO and UART
 
-- Series resistor 33–100 Ω on every `ext_pad` (except the three scan pins - see §5, 33 Ω max).
-- LEDs driven through a buffer (74HC244 from 3.3 V), each behind a solder jumper / DNP resistor
-  so it can be lifted. Never drive an LED directly from the pad ring.
+- Series resistor 33 Ω on every `ext_pad`.
+- LEDs+1kΩ resistor, each with a disconnectable jumper.
 - Test point on every `ext_pad`.
-- Every `ext_pad` also routed to the FPGA header.
 - UART: route RX/TX to a USB bridge (can include in PCB or just headers for external connection)
 
 ---
 
 ## 8. FPGA / host interface
 
-- One header carrying: `clk_sys`, `rst_sys_n`, `test_mode`, all 10 `ext_pad`, SDA, SCL, 3V3, GND.
 - If we use the PYNQ-Z2 3.3 V logic on both sides, so no level shifting needed.
+- One header carrying: `clk_sys`, `rst_sys_n`, `test_mode`, all 10 `ext_pad`, SDA, SCL, 3V3, GND.
 
 ---
 
-## 9. Protection
-
-- **Power-up order matters: the board must be powered before the FPGA / USB bridge is connected.**
-  An external driver holding a pin high while the board is unpowered injects current into the pad
-  ESD diodes and can latch up the chip on power-up. Silkscreen this on the board next to the
-  header.
-- Series resistors on all externally driven inputs (already covered above).
-- **TVS on the FPGA/USB connectors: optional**
-
----
-
-## 10. PCB and mechanical
+## 9. PCB and mechanical
 
 - 4-layer, with solid ground plane on L2 ??
 - Package base pad = GND, make sure to add contact for it
@@ -171,28 +145,27 @@ analysis was 2 mV. A regulator with ≤1 % initial accuracy and a 0.1 % feedback
 
 ---
 
-## 11. Bring-up order
+## 10. Bring-up order
 
-1. Bare board: check rails, LDO sequencing, no shorts. Chip not fitted.
+1. Bare board: check rails, no shorts. Chip not fitted.
 2. Fit chip. Power up with reset held, no clock. Measure quiescent current on both rails.
 3. Reset still held.  Apply a slow clock and step it (1, 5, 10 MHz). Core current should rise roughly linearly with frequency, if not - clock isn't reaching the die. If jumps to something large - contention or latch-up.
-4. T1 from §12. `test_mode = 1`: shift a known pattern through sdi -> sdo. This proves the die is alive and the
-   pad ring works, before any firmware exists.
+4. T1 from §12. `test_mode = 1`: shift a known pattern through sdi -> sdo. This proves the die is alive and the pad ring works, before any firmware exists.
 5. EEPROM fitted. Release reset, verify writeback works.(Can skip to GPIO example)
-6. `test_mode = 0`: EEPROM fitted with a blink program. Release reset, watch a GPIO toggle.
+6. EEPROM fitted with a blink program. Release reset, watch a GPIO toggle.
 7. UART hello-world.
 8. Ramp clock to 80 MHz, then shmoo.
 
 ---
 
-## 12. Test plan
+## 11. Test plan
 
 ### T1 - Scan chain integrity (structural)
 Shift a known pattern (walking 1, PRBS) through sdi -> sdo at a slow clock, compare.
 - **Answers:** is the die alive, is the pad ring alive, is the chain unbroken?
 - **Needs:** test_mode header, clean ext_pad[4:2] to FPGA header, slow clock path.
-- **Why first:** no firmware, no EEPROM, no clock tree required. Cheapest go/no-go.
-- **Extension:** re-run at increasing shift frequency to find scan-shift Fmax.
+- **Why first:** no firmware, no EEPROM. Cheapest go/no-go.
+- **Future test:** re-run at increasing shift frequency to find scan-shift Fmax.
 
 ### T2 - Static power
 Measure VDD and VDDPAD current with reset held and clock stopped, sweeping VDD.
@@ -209,8 +182,7 @@ At fixed VDD, sweep clock frequency and record core current. Repeat for a few VD
 ### T4 - Shmoo: Fmax vs VDD
 For each (VDD, frequency) point: reset, boot, run a self-test, check pass/fail.
 - **Answers:**  how much margin the 80 MHz signoff actually had.
-- **Needs:** adjustable VDD, programmable clock, software-controlled reset, a fast
-  pass/fail signal (see below).
+- **Needs:** adjustable VDD, swept clock, software-controlled reset, a fast pass/fail signal (see below).
 - **Pass/fail signal:** firmware runs a checksum over a known computation and toggles
   a GPIO at a distinct rate on pass; anything else is a fail. Must complete in ms, not
   seconds, or the sweep takes all day.
@@ -234,10 +206,9 @@ Repeat T1–T4 across all packaged parts using the socketed board.
 
 
 ### T9 - Robustness
-- Power sequencing: try both LDO enable orders, watch for latch-up current.
 - Reset behaviour: glitch reset, brown-out VDD, check recovery.
-- **Needs:** LDO enable jumper, current sense (a latch-up shows up as a current spike).
+TBD further
 
-### T10 - Benchmark (paflexinimui)
+### T10 - Benchmark
 CoreMark at max stable frequency.
 
