@@ -68,7 +68,7 @@ analysis was 20 mV.
 
 **Requirements**
 
-- Both rails brought through a jumper so that it can be disconnected and a bench SMU can replace the on-board LDO (for bringup and later a VDD-vs-Fmax test). 
+- Two LDOs generating 1.2V and 3.3V with input connected to the same external 5V. Both rails brought through a jumper so that it can be disconnected and a bench SMU can replace the on-board LDO (for bringup and later a VDD-vs-Fmax test). 
 - **Current sense:** high-side shunt + INA226 on each rail,
   so core and pad-ring current are separated even though ground is shared. Have a bypass path for bringup
 - **Decoupling**: 100 nF per supply pin, placed at the package. 1–10 µF bulk per rail.

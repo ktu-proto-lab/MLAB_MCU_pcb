@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "1_mlab_mcu_fp") (type "KiCad") (uri "${KIPRJMOD}/1_mlab_mcu_fp.pretty") (options "") (descr ""))
+)

@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "232-5205-01") (type "KiCad") (uri "${KIPRJMOD}/ul_232-5205-01/KiCADv6/2026-07-19_10-08-05.kicad_sym") (options "") (descr ""))
+	(lib (name "DSC1101DL5-020.0000") (type "KiCad") (uri "${KIPRJMOD}/ul_DSC1101DL5-020-0000/KiCADv6/2026-07-20_07-46-21.kicad_sym") (options "") (descr ""))
+)
