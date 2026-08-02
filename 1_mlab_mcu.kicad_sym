@@ -3893,6 +3893,26 @@
 				)
 			)
 		)
+		(symbol "DSC1101DL5-020.0000_1_1"
+			(pin power_in line
+				(at 0 -5.08 0)
+				(length 7.62)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
 		(embedded_fonts no)
 	)
 	(symbol "mlab_mcu"
@@ -3921,7 +3941,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "1_mlab_mcu_fp:VQFN-32-1EP_5x5mm_P0.5mm_EP3.5x3.5mm"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)

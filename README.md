@@ -69,7 +69,7 @@ analysis was 20 mV.
 **Requirements**
 
 - Two LDOs generating 1.2V and 3.3V with input connected to the same external 5V. Both rails brought through a jumper so that it can be disconnected and a bench SMU can replace the on-board LDO (for bringup and later a VDD-vs-Fmax test). 
-- **Current sense:** high-side shunt + INA226 on each rail,
+- **Current sense:** high-side shunt + *INA226 on each rail* (ignored for now),
   so core and pad-ring current are separated even though ground is shared. Have a bypass path for bringup
 - **Decoupling**: 100 nF per supply pin, placed at the package. 1–10 µF bulk per rail.
 
@@ -85,13 +85,26 @@ analysis was 20 mV.
 - Fixed CMOS oscillator at 20MHz (regular operation, for SCL=100kHz).
 - Header for FPGA (slow scan shifting clock).
 - Clock mux instead of jumpers for better SI. 
-(OLD: Jumper to choose between the 3 clock sources. Probably 1x3 jumper and another 2-pin jumper for the FPGA clock.)
+(OLD: Jumper to choose between the 3 clock sources. Probably 1x3 jumper and another 2-pin jumper for the FPGA clock.) ABANDONED - simple header to choose between CMOS Oscillator or SMA connector, can also connect breadboard wire directly to FPGA for slow scan clock.
 - Keep trace to `clk_sys_Pad` short (<30 mm). A 33 Ω series resistor at each clock source for better line matching?
 
 
 ---
 
 ## 4. Reset
+
+## 4. Reset
+
+`rst_sys_n_Pad` is a **wired-OR**: any source asserting low wins, a single pull-up is the only high source.
+
+- **10 kΩ pull-up to VDDPAD** on `rst_sys_n_Pad`.
+- **SPDT slide switch** as the manual bring-up reset: one throw ties the pole to GND, the other leaves it open. 
+- **FPGA pin, configured open-drain**, for software-controlled reset.
+- Debounce capacitor on the net.
+- Pads have Schmitt-trigger inputs, so no external buffer is needed on the RC edge.
+
+---
+
 
 - Normally control by MCU or FPGA - the controller system
 
