@@ -45,4 +45,8 @@ fp-info-cache
 *.kicad_prl
 
 # Ultra librarian downloaded libraries
-ul_*
+ul_* 
+
+# Libraries from SnapEDA
+SWS065-030V12TSK_REVA.zip
+SWS065-030V12TSK_REVA/

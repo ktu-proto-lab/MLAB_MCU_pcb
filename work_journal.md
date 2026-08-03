@@ -26,3 +26,12 @@ https://eu.mouser.com/en/ProductDetail/Microchip-Technology/DSC1101DL5-020.0000?
 ## TODO
 - Add switch for rst
 - Add EEPROM socket (DIP-8)
+
+
+# BOM
+- Socket: https://lt.farnell.com/3m/232-5205-01/test-socket-qfn-32pos-0-5mm-th/dp/2668401?cfm=true
+- CMOS Clock oscillator:
+https://eu.mouser.com/en/ProductDetail/Microchip-Technology/DSC1101DL5-020.0000?qs=Gd3Cm49KlLOJ7fVrdqTCCA%3D%3D
+- LDO 3V3: https://www.mouser.lt/en/ProductDetail/Texas-Instruments/TPS7A2033PDBVR?qs=hd1VzrDQEGjk%2FOBnRfKB4A%3D%3D
+- LDO 1V2: https://www.mouser.lt/en/ProductDetail/Texas-Instruments/TPS7A2012PDBVRG4?qs=vOcB1WHNNXISX%252BdA%2FhaD3A%3D%3D
+- EEPROM: https://www.mouser.lt/en/ProductDetail/Microchip-Technology/24LC512-I-P?qs=JmwSjbzn2OL8zYUOM6epRw%3D%3D
