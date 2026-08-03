@@ -23,7 +23,7 @@ Two board versions, one schematic project:
 - Full scan chain, enabled by `test_mode` (**active high**)
 - Timing closed at **80 MHz** (`clk_sys`)
 
-### Top-level ports (post-PnR netlist)
+### Top-level chip ports
 
 ```
 VDD, VSS, VDDPAD, VSSPAD       // 1.2 V core, 3.3 V pad ring
@@ -69,8 +69,8 @@ analysis was 20 mV.
 **Requirements**
 
 - Two LDOs generating 1.2V and 3.3V with input connected to the same external 5V. Both rails brought through a jumper so that it can be disconnected and a bench SMU can replace the on-board LDO (for bringup and later a VDD-vs-Fmax test). 
-- **Current sense:** high-side shunt + *INA226 on each rail* (ignored for now),
-  so core and pad-ring current are separated even though ground is shared. Have a bypass path for bringup
+- **Current sense:** high-side shunt + *INA4180 on each rail* - for amplified current sensing (don't know if necesary),
+Also bypass for bringup. Option for low-side shunt.
 - **Decoupling**: 100 nF per supply pin, placed at the package. 1–10 µF bulk per rail.
 
 ---
@@ -84,33 +84,20 @@ analysis was 20 mV.
 - Clock brought out to a SMA connector for external generator (for bringup and precise sweeps). 50 Ω shunt to ground at the connector. Some protection in case wrong amplitude from the generator? TODO: ask RF people!
 - Fixed CMOS oscillator at 20MHz (regular operation, for SCL=100kHz).
 - Header for FPGA (slow scan shifting clock).
-- Clock mux instead of jumpers for better SI. 
-(OLD: Jumper to choose between the 3 clock sources. Probably 1x3 jumper and another 2-pin jumper for the FPGA clock.) ABANDONED - simple header to choose between CMOS Oscillator or SMA connector, can also connect breadboard wire directly to FPGA for slow scan clock.
-- Keep trace to `clk_sys_Pad` short (<30 mm). A 33 Ω series resistor at each clock source for better line matching?
+- 3-pos jumper to choose between the CMOS oscillator and external source through SMA + 2-pos jumer for clk from FPGA.
 
 
 ---
-
-## 4. Reset
 
 ## 4. Reset
 
 `rst_sys_n_Pad` is a **wired-OR**: any source asserting low wins, a single pull-up is the only high source.
 
 - **10 kΩ pull-up to VDDPAD** on `rst_sys_n_Pad`.
-- **SPDT slide switch** as the manual bring-up reset: one throw ties the pole to GND, the other leaves it open. 
+- **SPDT slide switch** as the manual bring-up reset: one throw ties the pole to GND, the other to VDD. 
 - **FPGA pin, configured open-drain**, for software-controlled reset.
 - Debounce capacitor on the net.
 - Pads have Schmitt-trigger inputs, so no external buffer is needed on the RC edge.
-
----
-
-
-- Normally control by MCU or FPGA - the controller system
-
-- Physical switch + pull-up + debounce capacitor.
-- Test point on the reset net.
-- Open-drain drive point from the FPGA?, so reset can be asserted under software control. Maybe?
 
 ---
 
@@ -127,12 +114,10 @@ analysis was 20 mV.
 
 ## 6. Boot EEPROM and I2C
 
-- **Socket** for the 24CS512 (SOIC-to-DIP adapter into a DIP-8 socket, or a small daughterboard
-  on a header so firmware images can be swapped by swapping boards).
-- **Header** in parallel with the EEPROM for FPGA emulation of the I2C slave.
-  Convention: **if the header is used, the EEPROM is removed.** No isolation logic.
+- **Socket** for the 24CS512 (DIP-8 socket so firmware images can be swapped by swapping the EEPROM).
+- **Header** in parallel with the EEPROM for FPGA emulation of the I2C slave. **If the header is used, the EEPROM is removed.** No isolation logic.
 - Pull-ups: **4.7 kΩ** on SDA and SCL. At 80MHz `clk_sys` SCL will be 400kHz, for that add another set of **4.7 kΩ** as DNP in parallel.
-- Jumpers on EEPROM `A0..A2` and `WP`. Or make sure to configure correctly.
+- `A0..A2` and `WP`all tied to GND as in earlier testing.
 - Test points on SDA and SCL. Plus ground probe loop.
 - **Sensor header:** a 4-pin (3V3 / GND / SDA / SCL) header on the same bus so an I2C sensor breakout can be plugged in for peripheral testing. Nothing populated by default.
 
@@ -140,10 +125,10 @@ analysis was 20 mV.
 
 ## 7. GPIO and UART
 
-- Series resistor 33 Ω on every `ext_pad`.
+- Series resistor 33 Ω on every `ext_pad` to limit max current (IO pad can source 16mA).
 - LEDs+1kΩ resistor, each with a disconnectable jumper.
-- Test point on every `ext_pad`.
-- UART: route RX/TX to a USB bridge (can include in PCB or just headers for external connection)
+- Test point on every `ext_pad`. (Reuse the header)
+- UART: no on-PCB bridge - use an external one from the header.
 
 ---
 

@@ -27,6 +27,14 @@ https://eu.mouser.com/en/ProductDetail/Microchip-Technology/DSC1101DL5-020.0000?
 - Add switch for rst
 - Add EEPROM socket (DIP-8)
 
+# 2026-08-03
+## Ernesto pastebejimai
+1. Gnd kontaktu maitinimo saltiniui is lab bench
+2. sroves stiprintuvas suntams
+3. Clock apdaryt 3 pos header kad pasirinkt tarp sma ir CMOS osc ir dar papildoma 2pos kad prijungti fpga
+4. perkelti gpio jungima i fpga kad butu uz nuoseklio varzos
+5. 
+
 
 # BOM
 - Socket: https://lt.farnell.com/3m/232-5205-01/test-socket-qfn-32pos-0-5mm-th/dp/2668401?cfm=true

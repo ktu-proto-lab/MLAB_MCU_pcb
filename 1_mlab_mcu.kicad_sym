@@ -114,7 +114,7 @@
 			)
 			(polyline
 				(pts
-					(xy 5.08 -81.28) (xy 12.7 -81.28)
+					(xy 5.08 -81.28) (xy 19.685 -81.28)
 				)
 				(stroke
 					(width 0.127)
@@ -1278,7 +1278,7 @@
 			)
 			(polyline
 				(pts
-					(xy 12.7 2.54) (xy 5.08 2.54)
+					(xy 19.685 2.54) (xy 5.08 2.54)
 				)
 				(stroke
 					(width 0.127)
@@ -1290,7 +1290,7 @@
 			)
 			(polyline
 				(pts
-					(xy 12.7 -81.28) (xy 12.7 2.54)
+					(xy 19.685 -81.28) (xy 19.685 2.54)
 				)
 				(stroke
 					(width 0.127)
@@ -1869,6 +1869,60 @@
 					)
 				)
 				(number "32"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at 24.13 -73.66 180)
+				(length 5.08)
+				(name "ePad"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "33"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at 24.13 -76.2 180)
+				(length 5.08)
+				(name "Screw1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "34"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin unspecified line
+				(at 24.13 -78.74 180)
+				(length 5.08)
+				(name "Screw2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "35"
 					(effects
 						(font
 							(size 1.27 1.27)
