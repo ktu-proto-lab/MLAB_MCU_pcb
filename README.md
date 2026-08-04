@@ -69,7 +69,7 @@ analysis was 20 mV.
 **Requirements**
 
 - Two LDOs generating 1.2V and 3.3V with input connected to the same external 5V. Both rails brought through a jumper so that it can be disconnected and a bench SMU can replace the on-board LDO (for bringup and later a VDD-vs-Fmax test). 
-- **Current sense:** high-side shunt + *INA4180 on each rail* - for amplified current sensing (don't know if necesary),
+- **Current sense:** high-side shunt + *INA4180 on each rail* - for amplified current sensing (don't know if necesary), SMA on the output to see high frequency 
 Also bypass for bringup. Option for low-side shunt.
 - **Decoupling**: 100 nF per supply pin, placed at the package. 1–10 µF bulk per rail.
 
@@ -173,7 +173,7 @@ Shift a known pattern (walking 1, PRBS) through sdi -> sdo at a slow clock, comp
 ### T2 - Static power
 Measure VDD and VDDPAD current with reset held and clock stopped, sweeping VDD.
 - **Answers:** leakage vs supply; compares against the PnR power estimate.
-- **Needs:** INA226 on each rail, bench VDD.
+- **Needs:** bench VDD.
 
 ### T3 - Dynamic power
 At fixed VDD, sweep clock frequency and record core current. Repeat for a few VDD points.
