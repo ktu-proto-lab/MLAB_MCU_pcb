@@ -43,3 +43,7 @@ https://eu.mouser.com/en/ProductDetail/Microchip-Technology/DSC1101DL5-020.0000?
 - LDO 3V3: https://www.mouser.lt/en/ProductDetail/Texas-Instruments/TPS7A2033PDBVR?qs=hd1VzrDQEGjk%2FOBnRfKB4A%3D%3D
 - LDO 1V2: https://www.mouser.lt/en/ProductDetail/Texas-Instruments/TPS7A2012PDBVRG4?qs=vOcB1WHNNXISX%252BdA%2FhaD3A%3D%3D
 - EEPROM: https://www.mouser.lt/en/ProductDetail/Microchip-Technology/24LC512-I-P?qs=JmwSjbzn2OL8zYUOM6epRw%3D%3D
+- Current-sense amp (4 channel):
+    - 20 V/V: https://www.mouser.lt/en/ProductDetail/Texas-Instruments/INA4180A1IPWR?qs=f9yNj16SXrIc8%252Bkjpx1s2w%3D%3D
+    - 50 V/V: https://www.mouser.lt/en/ProductDetail/Texas-Instruments/INA4180A2IPWR?qs=chTDxNqvsykNfIKY08v%252BVA%3D%3D
+    - 100 V/V: https://www.mouser.lt/en/ProductDetail/Texas-Instruments/INA4180A3IPWR?qs=chTDxNqvsynaXF8xKMZ2OQ%3D%3D
