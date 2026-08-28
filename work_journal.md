@@ -2,7 +2,7 @@
 
 ## TODO
 
-- Use README.md to choose components and create the schematic
+- Add links for each component for automatic BOM generation
 
 ## 2026-07-19
 
@@ -35,6 +35,10 @@ https://eu.mouser.com/en/ProductDetail/Microchip-Technology/DSC1101DL5-020.0000?
 4. perkelti gpio jungima i fpga kad butu uz nuoseklio varzos
 5. 
 
+# Klausimai
+1. Ar ant clk net šalia socket'o reikia dėti pF kondensatorių?
+2. Kiek vietos palikt aplink SMA jungteles?
+
 
 # BOM
 - Socket: https://lt.farnell.com/3m/232-5205-01/test-socket-qfn-32pos-0-5mm-th/dp/2668401?cfm=true
@@ -47,3 +51,6 @@ https://eu.mouser.com/en/ProductDetail/Microchip-Technology/DSC1101DL5-020.0000?
     - 20 V/V: https://www.mouser.lt/en/ProductDetail/Texas-Instruments/INA4180A1IPWR?qs=f9yNj16SXrIc8%252Bkjpx1s2w%3D%3D
     - 50 V/V: https://www.mouser.lt/en/ProductDetail/Texas-Instruments/INA4180A2IPWR?qs=chTDxNqvsykNfIKY08v%252BVA%3D%3D
     - 100 V/V: https://www.mouser.lt/en/ProductDetail/Texas-Instruments/INA4180A3IPWR?qs=chTDxNqvsynaXF8xKMZ2OQ%3D%3D
+    - SS34
+    - SMAJ6.0A
+    - 
