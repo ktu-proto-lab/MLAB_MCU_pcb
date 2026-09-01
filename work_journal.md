@@ -40,6 +40,8 @@ https://eu.mouser.com/en/ProductDetail/Microchip-Technology/DSC1101DL5-020.0000?
 - Mounting holes on the corners to lift pcb from the ground (minor protection against backside shorts)
 - Remake FPGA PMODs to connect directly to FPGA without intermediate wires, add testpoints next to PMOD.
 
+- Custom DRC rules from - https://github.com/Cimos/kicad-druid/blob/main/JLCPCB/JLCPCB.kicad_dru
+- Add MF part numbers for BOM generation to key components
 
 # BOM
 - Socket: https://lt.farnell.com/3m/232-5205-01/test-socket-qfn-32pos-0-5mm-th/dp/2668401?cfm=true

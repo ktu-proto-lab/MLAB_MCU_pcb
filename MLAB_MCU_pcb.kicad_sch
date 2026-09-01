@@ -9348,6 +9348,12 @@
 		(uuid "51ca4794-9465-4339-8e82-2e4fac6666dd")
 	)
 	(junction
+		(at 100.33 105.41)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "52eae00b-8f15-4d24-8d95-378590d1f814")
+	)
+	(junction
 		(at 240.03 156.21)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9604,6 +9610,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d4b746b9-5d4d-4053-a9bc-7f3d50843b8b")
+	)
+	(junction
+		(at 107.95 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d8c46f74-87e5-46ed-b938-23d1e7cf50df")
 	)
 	(junction
 		(at 285.75 30.48)
@@ -12361,6 +12373,16 @@
 	)
 	(wire
 		(pts
+			(xy 100.33 105.41) (xy 100.33 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a371a59f-51d6-4492-84cc-4d4fd0674379")
+	)
+	(wire
+		(pts
 			(xy 107.95 102.87) (xy 107.95 105.41)
 		)
 		(stroke
@@ -12481,6 +12503,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 113.03) (xy 107.95 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acbfaf43-f306-4e90-9e4c-c0ab7e7362bc")
+	)
+	(wire
+		(pts
 			(xy 231.14 215.9) (xy 233.68 215.9)
 		)
 		(stroke
@@ -12588,6 +12620,16 @@
 			(type default)
 		)
 		(uuid "b59e9b14-0871-4c35-93fd-2deac65eeff7")
+	)
+	(wire
+		(pts
+			(xy 107.95 115.57) (xy 100.33 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5e27f88-2e8f-40e2-8acc-5f50c5b41c74")
 	)
 	(wire
 		(pts
@@ -14671,6 +14713,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 113.03 115.57 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00b0cda1-0489-4669-bc4d-96444fb188df")
+		(property "Reference" "J13"
+			(at 113.284 108.204 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 112.776 110.744 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+			(at 113.03 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 113.03 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7aace4f0-a012-45be-89c3-2390829612a1")
+		)
+		(pin "1"
+			(uuid "451ae962-c2b2-442f-af16-6e94ba4b14ef")
+		)
+		(instances
+			(project "MLAB_MCU_pcb"
+				(path "/165246b3-0af3-43ed-904f-1ee5b852fd99"
+					(reference "J13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 182.88 77.47 0)
 		(unit 1)
@@ -15316,6 +15439,28 @@
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
 			(at 87.63 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" "Amphenol RF"
+			(at 87.63 198.12 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "132134"
+			(at 87.63 198.12 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16560,6 +16705,28 @@
 				)
 			)
 		)
+		(property "MANUFACTURER" "Texas Instruments"
+			(at 176.53 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "INA4180A1IPWR"
+			(at 176.53 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "1c417d85-8eea-4881-b2a8-91467d46e0e3")
 		)
@@ -17574,6 +17741,28 @@
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 191.77 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" "Amphenol RF"
+			(at 191.77 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "132134"
 			(at 191.77 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -19331,6 +19520,28 @@
 				)
 			)
 		)
+		(property "MANUFACTURER" "Texas Instruments"
+			(at 86.36 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "TPS7A2012PDBVRG4"
+			(at 86.36 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "5f136b61-5d7a-42ae-b884-a8bdea16558c")
 		)
@@ -19412,6 +19623,28 @@
 		)
 		(property "Description" "400W unidirectional Transient Voltage Suppressor, 6.0Vr, SMA(DO-214AC)"
 			(at 46.99 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" "Littelfuse"
+			(at 46.99 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "SMAJ6.0A"
+			(at 46.99 72.39 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19913,6 +20146,28 @@
 				)
 			)
 		)
+		(property "MANUFACTURER" "Texas Instruments"
+			(at 271.78 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "INA4180A1IPWR"
+			(at 271.78 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "1c417d85-8eea-4881-b2a8-91467d46e0e4")
 		)
@@ -20192,6 +20447,28 @@
 			)
 		)
 		(property "Description" ""
+			(at 48.26 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" "Microchip Technology"
+			(at 48.26 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "DSC1101DL5-020.0000"
 			(at 48.26 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -21255,6 +21532,28 @@
 				)
 			)
 		)
+		(property "MANUFACTURER" "onsemi"
+			(at 41.91 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "SS34"
+			(at 41.91 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "be8a9905-085a-4c4f-bf93-535540ae6a75")
 		)
@@ -21403,6 +21702,28 @@
 			)
 		)
 		(property "Description" "300 mA Low Dropout Voltage Regulator, Fixed Output, 1.6..6.0Vin, Low-Noise (7μV RMS), 6.5μA IQ LDO, SOT-23"
+			(at 86.36 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" "Texas Instruments"
+			(at 86.36 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "TPS7A2033PDBVR"
 			(at 86.36 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -21733,6 +22054,28 @@
 		)
 		(property "Description" "Quad current sense amplifier, Rail-to-Rail, 26V, Gain 20 V/V, TSSOP-14"
 			(at 267.97 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" "Texas Instruments"
+			(at 265.43 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "INA4180A1IPWR"
+			(at 265.43 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22741,6 +23084,28 @@
 				)
 			)
 		)
+		(property "MANUFACTURER" "Texas Instruments"
+			(at 299.72 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "INA4180A1IPWR"
+			(at 299.72 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "1c417d85-8eea-4881-b2a8-91467d46e0e6")
 		)
@@ -23271,7 +23636,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -23706,6 +24071,28 @@
 				)
 			)
 		)
+		(property "MANUFACTURER" "Amphenol RF"
+			(at 287.02 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "132134"
+			(at 287.02 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9d32369f-23de-43b3-b0c3-c657d6cdc992")
 		)
@@ -23778,6 +24165,28 @@
 			)
 		)
 		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 285.75 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" "Amphenol RF"
+			(at 285.75 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "132134"
 			(at 285.75 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -24193,6 +24602,28 @@
 		)
 		(property "Description" "Quad current sense amplifier, Rail-to-Rail, 26V, Gain 20 V/V, TSSOP-14"
 			(at 281.94 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" "Texas Instruments"
+			(at 279.4 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "INA4180A1IPWR"
+			(at 279.4 109.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26162,6 +26593,28 @@
 				)
 			)
 		)
+		(property "MANUFACTURER" "Global Connector Technology"
+			(at 17.78 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "TBC05-02-1-G-G"
+			(at 17.78 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "04a50635-d96c-4e55-b5ba-45667eaf97b9")
 		)
@@ -26416,6 +26869,28 @@
 			)
 		)
 		(property "Description" "I2C Serial EEPROM, 512Kb, DIP-8/SOIC-8/TSSOP-8/DFN-8"
+			(at 123.19 252.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MANUFACTURER" "Microchip Technology"
+			(at 123.19 252.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MP" "24LC512-I/P"
 			(at 123.19 252.73 0)
 			(hide yes)
 			(show_name no)
