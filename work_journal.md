@@ -35,9 +35,10 @@ https://eu.mouser.com/en/ProductDetail/Microchip-Technology/DSC1101DL5-020.0000?
 4. perkelti gpio jungima i fpga kad butu uz nuoseklio varzos
 5. 
 
-# Klausimai
-1. Ar ant clk net šalia socket'o reikia dėti pF kondensatorių?
-2. Kiek vietos palikt aplink SMA jungteles?
+
+# 2026-09-01
+- Mounting holes on the corners to lift pcb from the ground (minor protection against backside shorts)
+- Remake FPGA PMODs to connect directly to FPGA without intermediate wires, add testpoints next to PMOD.
 
 
 # BOM
