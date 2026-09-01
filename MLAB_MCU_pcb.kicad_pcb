@@ -22962,7 +22962,7 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "B.Cu")
 		(uuid "355f35c2-a3a3-49df-9653-fb8a898ad9fb")
-		(at 147.862689 103.650571 180)
+		(at 145.2875 103.650571 180)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C9"
@@ -23290,7 +23290,7 @@
 	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 		(layer "B.Cu")
 		(uuid "9d8ab772-5a89-4786-94e2-c93c0598bd44")
-		(at 147.862689 107.79924 180)
+		(at 145.2875 107.79924 180)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor handsolder")
 		(property "Reference" "C8"
@@ -24336,652 +24336,6 @@
 			(justify left bottom)
 		)
 	)
-	(via
-		(at 183 115.5)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "00617a14-70f4-425e-86ad-4e1a2f53edc4")
-	)
-	(via
-		(at 183 130)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "066f0392-5da7-4b64-8d1e-ff8e2a666180")
-	)
-	(via
-		(at 183 110.25)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "0bdcedaa-5722-4564-a84a-2f0b64e29f05")
-	)
-	(via
-		(at 189.75 132.5)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "0c3fb54b-3b78-458d-8c1c-77d38422782d")
-	)
-	(via
-		(at 189.75 107.75)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "0dc0d94d-3b5c-449c-bd57-a690417d7bb3")
-	)
-	(via
-		(at 183 107.75)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "18ed22a0-ab4c-4080-bb52-5ecad904af51")
-	)
-	(via
-		(at 189.75 118)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "2339aab9-f855-42c9-b99d-eb625418f6f2")
-	)
-	(via
-		(at 189.75 115.5)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "32650514-fe69-4284-9f0d-33123845b89d")
-	)
-	(via
-		(at 189.75 137.75)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "4d72bba1-94a3-4dec-bc1c-980a790fbaaf")
-	)
-	(via
-		(at 183 118)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "5113424e-de7e-4036-9940-f6ac66ff1f3b")
-	)
-	(via
-		(at 189.75 135)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "5721c331-26ac-4746-8783-44dcaae07b0d")
-	)
-	(via
-		(at 183 135)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "5f3f0892-a7b5-41b2-a71b-6beffea0f877")
-	)
-	(via
-		(at 183 137.75)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "aac1500b-8382-48f3-bd0e-ef000162a28e")
-	)
-	(via
-		(at 183 132.5)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "af3a978e-8217-4ebf-a19c-b125c0e1f59b")
-	)
-	(via
-		(at 189.75 140.25)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "b1403f6a-7987-413a-a6f0-b31450c8cb49")
-	)
-	(via
-		(at 189.75 130)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "b165727a-babe-4e4d-ab27-0eba0dc20962")
-	)
-	(via
-		(at 189.75 112.75)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "da73f701-c47e-46c7-ad54-e2b427cf1871")
-	)
-	(via
-		(at 183 140.25)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "e157c6a7-2c55-48cc-bd9f-c4ec2d9ad033")
-	)
-	(via
-		(at 183 112.75)
-		(size 1.2)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(tenting
-			(front no)
-			(back yes)
-		)
-		(capping no)
-		(covering
-			(front no)
-			(back no)
-		)
-		(plugging
-			(front no)
-			(back no)
-		)
-		(filling no)
-		(padstack
-			(mode custom)
-			(layer "In1.Cu"
-				(size 1.2)
-			)
-			(layer "In2.Cu"
-				(size 1.2)
-			)
-			(layer "B.Cu"
-				(size 0.6)
-			)
-		)
-		(net "")
-		(uuid "fab3f563-b18b-43d8-acb7-b22b07fabe1f")
-	)
 	(segment
 		(start 130.2 123.3)
 		(end 130.2 124.8625)
@@ -25045,6 +24399,652 @@
 		(layer "F.Cu")
 		(net "0")
 		(uuid "cb2aa03f-fe23-4311-a090-65d4b4bdf431")
+	)
+	(via
+		(at 183 115.5)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "00617a14-70f4-425e-86ad-4e1a2f53edc4")
+	)
+	(via
+		(at 183 130)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "066f0392-5da7-4b64-8d1e-ff8e2a666180")
+	)
+	(via
+		(at 183 110.25)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "0bdcedaa-5722-4564-a84a-2f0b64e29f05")
+	)
+	(via
+		(at 189.75 132.5)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "0c3fb54b-3b78-458d-8c1c-77d38422782d")
+	)
+	(via
+		(at 189.75 107.75)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "0dc0d94d-3b5c-449c-bd57-a690417d7bb3")
+	)
+	(via
+		(at 183 107.75)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "18ed22a0-ab4c-4080-bb52-5ecad904af51")
+	)
+	(via
+		(at 189.75 118)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "2339aab9-f855-42c9-b99d-eb625418f6f2")
+	)
+	(via
+		(at 189.75 115.5)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "32650514-fe69-4284-9f0d-33123845b89d")
+	)
+	(via
+		(at 189.75 137.75)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "4d72bba1-94a3-4dec-bc1c-980a790fbaaf")
+	)
+	(via
+		(at 183 118)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "5113424e-de7e-4036-9940-f6ac66ff1f3b")
+	)
+	(via
+		(at 189.75 135)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "5721c331-26ac-4746-8783-44dcaae07b0d")
+	)
+	(via
+		(at 183 135)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "5f3f0892-a7b5-41b2-a71b-6beffea0f877")
+	)
+	(via
+		(at 183 137.75)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "aac1500b-8382-48f3-bd0e-ef000162a28e")
+	)
+	(via
+		(at 183 132.5)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "af3a978e-8217-4ebf-a19c-b125c0e1f59b")
+	)
+	(via
+		(at 189.75 140.25)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "b1403f6a-7987-413a-a6f0-b31450c8cb49")
+	)
+	(via
+		(at 189.75 130)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "b165727a-babe-4e4d-ab27-0eba0dc20962")
+	)
+	(via
+		(at 189.75 112.75)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "da73f701-c47e-46c7-ad54-e2b427cf1871")
+	)
+	(via
+		(at 183 140.25)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "e157c6a7-2c55-48cc-bd9f-c4ec2d9ad033")
+	)
+	(via
+		(at 183 112.75)
+		(size 1.2)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(tenting
+			(front no)
+			(back yes)
+		)
+		(capping no)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(filling no)
+		(padstack
+			(mode custom)
+			(layer "In1.Cu"
+				(size 1.2)
+			)
+			(layer "In2.Cu"
+				(size 1.2)
+			)
+			(layer "B.Cu"
+				(size 0.6)
+			)
+		)
+		(net "0")
+		(uuid "fab3f563-b18b-43d8-acb7-b22b07fabe1f")
 	)
 	(segment
 		(start 137.5 119.25)
@@ -25343,44 +25343,36 @@
 		(uuid "d0ba4f8e-7896-436b-b18b-3983596dd558")
 	)
 	(segment
-		(start 148.900189 101.447865)
-		(end 148.900189 103.650571)
+		(start 153.899809 104.350569)
+		(end 153.899809 104.089457)
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "0ca878a5-0853-47e3-a567-1510392776fd")
+		(uuid "06554fae-8db3-4f76-9087-3f4e7e11295a")
 	)
 	(segment
-		(start 149.446291 103.104469)
-		(end 148.900189 103.650571)
-		(width 1)
-		(layer "B.Cu")
-		(net "/VDD_CORE")
-		(uuid "2d24b528-bee8-4969-b3fa-b8a29fdef2f8")
-	)
-	(segment
-		(start 146.337359 110.45)
+		(start 145.3 110.45)
 		(end 127.05 110.45)
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "2f9831c2-a267-4315-a637-67e2e9769b21")
+		(uuid "1661a655-58ba-4c8e-ba7a-7aea0fae9f7d")
 	)
 	(segment
-		(start 152.899049 97.449005)
-		(end 148.900189 101.447865)
+		(start 146.871102 103.104469)
+		(end 146.325 103.650571)
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "31105126-6828-4ee4-97dc-533817dc0695")
+		(uuid "25dac345-406a-4c50-8479-d89ed327708c")
 	)
 	(segment
-		(start 148.900189 107.88717)
-		(end 146.337359 110.45)
+		(start 146.325 107.79924)
+		(end 146.325 107.88717)
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "314dd3e5-66e9-488e-82a1-2f8e33a6c12e")
+		(uuid "3c1511a0-ae9a-46b8-8f5e-b22bc3c81a5b")
 	)
 	(segment
 		(start 153.899809 104.089457)
@@ -25388,7 +25380,23 @@
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "43731fe7-972c-448c-ba56-2ee8b5bd3555")
+		(uuid "5cfbf7b6-2662-46ae-94bc-0a83ab4b3a60")
+	)
+	(segment
+		(start 146.6632 103.650571)
+		(end 146.325 103.650571)
+		(width 1)
+		(layer "B.Cu")
+		(net "/VDD_CORE")
+		(uuid "6835dad8-1684-43e5-b6ad-969bc1755071")
+	)
+	(segment
+		(start 146.25 109.5)
+		(end 145.3 110.45)
+		(width 1)
+		(layer "B.Cu")
+		(net "/VDD_CORE")
+		(uuid "6b0e5961-6fb8-446a-b75f-4ae049eb056a")
 	)
 	(segment
 		(start 127.05 110.45)
@@ -25396,47 +25404,55 @@
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "5f044cec-001e-40eb-9265-0daff1d6b8ca")
+		(uuid "74f70d34-4848-4a02-8a38-a2c2249779bc")
 	)
 	(segment
-		(start 148.900189 107.79924)
-		(end 148.900189 107.88717)
+		(start 146.325 107.88717)
+		(end 146.25 107.96217)
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "6819aa9f-15ab-41a8-bca3-d8d21590a824")
+		(uuid "8cee484f-51b1-4e9e-b427-8a08ecfbd544")
 	)
 	(segment
-		(start 148.900189 103.650571)
-		(end 148.900189 107.79924)
+		(start 146.25 107.96217)
+		(end 146.25 109.5)
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "7aa44cdc-c657-4385-b072-40ec490c4754")
+		(uuid "9f5de5a6-a702-4721-a796-1e3a921b21fa")
 	)
 	(segment
 		(start 152.899049 93.150571)
-		(end 152.899049 97.449005)
+		(end 152.899049 97.414722)
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "a79f578a-1f72-4eb2-b848-951107852da1")
+		(uuid "b3868090-839a-4d43-96eb-715a763c17b0")
 	)
 	(segment
-		(start 153.899809 104.350569)
-		(end 153.899809 104.089457)
+		(start 152.899049 97.414722)
+		(end 146.6632 103.650571)
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "cb08e7eb-e141-44cd-8d4b-e988176f61b9")
+		(uuid "b7eb54a7-bccd-418f-89b9-75897b855799")
 	)
 	(segment
 		(start 152.914821 103.104469)
-		(end 149.446291 103.104469)
+		(end 146.871102 103.104469)
 		(width 1)
 		(layer "B.Cu")
 		(net "/VDD_CORE")
-		(uuid "fdbf964b-6525-4b94-b13a-d83f5fd03acf")
+		(uuid "da89dcd6-0281-49fe-8794-2818b6c36b58")
+	)
+	(segment
+		(start 146.325 103.650571)
+		(end 146.325 107.79924)
+		(width 1)
+		(layer "B.Cu")
+		(net "/VDD_CORE")
+		(uuid "f1f3ec40-f04e-4f61-8ed9-8d8702850400")
 	)
 	(segment
 		(start 174 76)
