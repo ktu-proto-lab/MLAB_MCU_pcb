@@ -6688,7 +6688,7 @@
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "543d2211-6493-430d-9002-2e91afb46cbf")
-		(at 197.75 127.42)
+		(at 197.75 128.3)
 		(descr "Through hole angled pin header, 2x06, 2.54mm pitch, 6mm pin length, double rows")
 		(tags "Through hole angled pin header THT 2x06 2.54mm double row")
 		(property "Reference" "J12"
