@@ -9274,7 +9274,7 @@
 		)
 		(uuid "f2a06930-40d6-4756-8bc8-4ae516158d7a")
 	)
-	(text "Short instead of R7 for the start"
+	(text "Short instead of R2 for the start"
 		(exclude_from_sim no)
 		(at 81.788 235.458 0)
 		(effects
@@ -13840,7 +13840,7 @@
 		)
 		(uuid "018e17c1-1f82-4590-be47-682c0a06f6d6")
 	)
-	(label "GPIO5_ISO"
+	(label "GPIO9_ISO"
 		(at 372.11 191.77 0)
 		(effects
 			(font
@@ -13880,7 +13880,7 @@
 		)
 		(uuid "05927811-2620-4217-a561-4a3047f87231")
 	)
-	(label "GPIO8_ISO"
+	(label "GPIO4_ISO"
 		(at 342.9 194.31 0)
 		(effects
 			(font
@@ -13930,7 +13930,7 @@
 		)
 		(uuid "1a7b4de8-522e-4a87-8cde-eba9d6c50420")
 	)
-	(label "GPIO7_ISO"
+	(label "GPIO3_ISO"
 		(at 342.9 196.85 0)
 		(effects
 			(font
@@ -14270,7 +14270,7 @@
 		)
 		(uuid "715ca430-1879-4153-856c-ab938409a896")
 	)
-	(label "GPIO9_ISO"
+	(label "GPIO5_ISO"
 		(at 342.9 191.77 0)
 		(effects
 			(font
@@ -14300,7 +14300,7 @@
 		)
 		(uuid "7c6aff35-0388-4752-8d60-c8ea73bb11a1")
 	)
-	(label "GPIO3_ISO"
+	(label "GPIO7_ISO"
 		(at 372.11 196.85 0)
 		(effects
 			(font
@@ -14410,7 +14410,7 @@
 		)
 		(uuid "ac173762-23a7-413c-8253-a2ad03b3a7e2")
 	)
-	(label "GPIO2_ISO"
+	(label "GPIO6_ISO"
 		(at 372.11 199.39 0)
 		(effects
 			(font
@@ -14530,7 +14530,7 @@
 		)
 		(uuid "cd8637d8-7e28-42e9-9e7c-bde2692b6dbf")
 	)
-	(label "GPIO6_ISO"
+	(label "GPIO2_ISO"
 		(at 342.9 199.39 0)
 		(effects
 			(font
@@ -14660,7 +14660,7 @@
 		)
 		(uuid "f04fd700-9663-4d0d-90fa-169fc9901f96")
 	)
-	(label "GPIO4_ISO"
+	(label "GPIO8_ISO"
 		(at 372.11 194.31 0)
 		(effects
 			(font
