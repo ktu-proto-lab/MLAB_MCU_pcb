@@ -15514,7 +15514,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Coaxial:SMA_Amphenol_132134_Vertical"
+		(property "Footprint" "1_mlab_mcu_fp:SMA-J-P-X-ST-TH1-MKT"
 			(at 87.63 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -17893,7 +17893,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Coaxial:SMA_Amphenol_132134_Vertical"
+		(property "Footprint" "1_mlab_mcu_fp:SMA-J-P-X-ST-TH1-MKT"
 			(at 191.77 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -24365,7 +24365,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Coaxial:SMA_Amphenol_132134_Vertical"
+		(property "Footprint" "1_mlab_mcu_fp:SMA-J-P-X-ST-TH1-MKT"
 			(at 287.02 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -24469,7 +24469,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Coaxial:SMA_Amphenol_132134_Vertical"
+		(property "Footprint" "1_mlab_mcu_fp:SMA-J-P-X-ST-TH1-MKT"
 			(at 285.75 40.64 0)
 			(hide yes)
 			(show_name no)
